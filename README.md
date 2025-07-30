@@ -1,3 +1,42 @@
+# Фронтенд Проекта «Инициатива»
+
+<img src="public/its_tech.png" alt="Логотип проекта" width="200">
+
+Используется **Next.js** с использованием **TailwindCSS**
+
+
+### Структура папок:
+```
+src/
+├── app/                 # Next.js App Router structure
+├── components/          # All your React components
+│   ├── common/          # Reusable global components (Modal, Tooltip)
+│   ├── layout/          # Layout-specific components (Header, Footer, Navbar)
+│   ├── pages/           # Page-specific components (HomePageHero, ProductCard)
+│   └── ui/              # UI primitives (Button, Input, Select)
+├── lib/                 # Business logic (authentication, API wrappers)
+├── hooks/               # Custom React hooks
+├── api/                 # External API services and calls
+├── stores/              # State management (Zustand or Redux)
+└── utils/               # Small, reusable helper functions (formatting, calculations)
+```
+
+
+### Рекомендуемая Структура маршрутов API:
+
+```
+src/app/api/
+├── products/
+│   ├── route.js             # Handles `/api/products` requests
+│   └── [id]/route.js        # Handles `/api/products/{id}` requests
+├── orders/
+│   ├── route.js             # Handles `/api/orders` requests
+│   └── [id]/route.js        # Handles `/api/orders/{id}` requests
+└── users/
+    ├── route.js             # Handles `/api/users` requests
+    └── [id]/route.js        # Handles `/api/users/{id}` requests
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
